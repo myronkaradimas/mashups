@@ -76,7 +76,7 @@ var url="https://www.googleapis.com/youtube/v3/search?part=snippet&q="+word+"&ma
 
 <div id="header">
 
-  <form action="wikigram.php" method="post" enctype="multipart/form-data">
+  <form action="instatube.php" method="post" enctype="multipart/form-data">
 
       <table id="sample">
 
