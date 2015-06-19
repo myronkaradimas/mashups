@@ -32,7 +32,7 @@ $object = json_decode( $data ); // stdClass object
 var word = "<?php echo $tag?>";
 
 
-var url="https://www.googleapis.com/youtube/v3/search?part=snippet&q="+word+"&maxResults=10&key=AIzaSyCDSUsNu8Xdp6dL95Qnu62seqaq8Hzgkl8";
+var url="https://www.googleapis.com/youtube/v3/search?part=snippet&q="+word+"&maxResults=20&key=AIzaSyCDSUsNu8Xdp6dL95Qnu62seqaq8Hzgkl8";
 
   $(document).ready( function(){
 
@@ -73,9 +73,29 @@ var url="https://www.googleapis.com/youtube/v3/search?part=snippet&q="+word+"&ma
 
 </head>
 <body>
+
+<div id="header">
+
+  <form action="wikigram.php" method="post" enctype="multipart/form-data">
+
+      <table id="sample">
+
+        <tr>
+          <td><a href="homepage.html">
+            <img src="images/logopeq.png" class="logo"></a>
+          </td>
+          <td><input type="text" name="choice" class="search"></td>
+          <td><input type="submit" class="button" value="Buscar"></td>
+        </tr>
+      
+      </table>
+
+  </form>
+
+</div>
  
 
- <div id="images">
+<div id="images">
   <?php //bucle con los datos
 
   foreach($object->data as $item):
@@ -85,11 +105,12 @@ var url="https://www.googleapis.com/youtube/v3/search?part=snippet&q="+word+"&ma
   endforeach;
   ?>
   
-  </div>
+</div>
 
 
+<br>
 
-<!--  Youtube videos    -->
+<!--  Youtube videos   -->
 
   <div id="resultados"></div>
 
