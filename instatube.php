@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 $clave="128d96b790704f5db73b5a3dc706831a"; //importante cambiarla!
 
@@ -61,6 +61,8 @@ var url="https://www.googleapis.com/youtube/v3/search?part=snippet&q="+word+"&ma
 
 
 </script>
+<link href="stylesheets/instatube.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -74,46 +76,44 @@ var url="https://www.googleapis.com/youtube/v3/search?part=snippet&q="+word+"&ma
 </head>
 <body>
 
-<div id="header">
+<nav id="header">
 
   <form action="instatube.php" method="post" enctype="multipart/form-data">
-
-      <table id="sample">
-
-        <tr>
-          <td><a href="homepage.html">
-            <img src="images/logopeq.png" class="logo"></a>
-          </td>
-          <td><input type="text" name="choice" class="search"></td>
-          <td><input type="submit" class="button" value="Buscar"></td>
-        </tr>
-      
-      </table>
+      <a href="index.html">
+        <img src="images/logopeq.png" id="logo">
+      </a>
+      <div class="search">
+        <input type="text" name="choice" id="search">
+        <button type="submit" id="button">
+          <span id="button-text">Buscar</span>
+        </button>
+      </div>
 
   </form>
 
-</div>
+</nav>
  
+<div class="content-photos">
+  <div id="instagram-images">
+    <?php //bucle con los datos
 
-<div id="images">
-  <?php //bucle con los datos
-
-  foreach($object->data as $item):
-  ?>
-  <img src='<?= $item->images->standard_resolution->url?>'/>
-  <?php
-  endforeach;
-  ?>
-  
-</div>
+    foreach($object->data as $item):
+    ?>
+    <img src='<?= $item->images->standard_resolution->url?>'/>
+    <?php
+    endforeach;
+    ?>
+    
+  </div>
 
 
-<br>
+  <br>
 
-<!--  Youtube videos   -->
+  <!--  Youtube videos   -->
 
   <div id="resultados"></div>
 
+</div><!--content-photos-->
 
 
 </body>

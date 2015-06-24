@@ -1,0 +1,74 @@
+@import "compass/reset";
+@import "compass/css3";
+
+body{
+	margin:0;
+}
+
+nav{
+	height:80px;
+	background-color:#1d8ea3;
+	position:fixed;
+	width:100%;
+	margin:0;
+	top:0;
+	form{
+		width:57%;
+		float:right;
+	}
+}
+
+#logo{
+	height:85px;
+}
+
+.search{
+	text-align:right;
+	margin-top:14px;
+}
+
+#search{
+	height:40px;
+	width:250px;
+	@include border-radius(30px);
+	font-family:"Fredoka One";
+	font-size:1.2em;
+	padding:5px;
+}
+
+#button{
+	height:40px;
+	width:200px;
+	color: #fff;
+    background-color: #0e5c6a;
+    @include border-radius(10px);
+    -webkit-box-shadow: 0px 4px 0px 4px rgba(5,74,86,1);
+	-moz-box-shadow: 0px 4px 0px 4px rgba(5,74,86,1);
+	box-shadow: 0px 4px 0px 4px rgba(5,74,86,1);
+	border:none;
+	margin:0 3%;
+	vertical-align:middle;
+	position:relative;
+	bottom:5px;
+	span{
+		font-family:"Fredoka One";
+		font-size:2em;
+	}
+}
+
+#instagram-images{
+	width:50%;
+	display:inline-block;
+	float:left;
+}
+
+#resultados{
+	text-align:center;
+	width:50%;
+	display:inline-block;
+	font-family:"Fredoka One";
+}
+
+.content-photos{
+	margin-top:7%;
+}
